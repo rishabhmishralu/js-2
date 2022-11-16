@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+      body{
+        background-color: black;
+        margin: 30px;
+      }
+      h1{
+        text-align: center;
+        color: aliceblue;
+      }
+      b{
+        color: brown;
+      }
+      p{
+        color: cornflowerblue;
+
+      }
+      pre{
+        color: aliceblue;
+      }
+
+    </style> -->
+</head>
+<body>
+    <h1>JavaScript Handson-2</h1>
+    <P><B>Calculator</B></P>
+    <P>Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.</P>
+    <pre>const Calculator = (A, B, C) => 
+      {
+        if(A==='+')
+        return B+C;
+        else if (A==='-')
+        return B-C;
+        else if (A==='*')
+        return B*C;
+        else if (A=== '/')
+        return B/C;
+          
+      };
+      </pre>
+      <hr>
+    <p><b>Check whether the condition is fulfilled or not?</b></p>
+    <p>Write a program that takes a number and prints whether the number is divisible by  6 and  9or not.</p>
+    <pre>
+            const Check_divisibility = (N) => {
+                if(N%6==0 && N%9==0){
+                return "Divisible by both";
+                }
+                else {
+                  return "Not Divisible by both";
+                }
+            };
+            </pre>
+            <hr>
+            <p><b>Eligible Voter</b></p>
+            <p>You are given an integer  A, denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.</p>
+                <pre>const isEligible = (a) => {
+                    if(a>18){
+                      return "Eligible for Voting"
+                    }
+                    else
+                    {
+                      return  "Not Eligible for Voting"
+                    }
+                };
+            </pre>
+                <hr>
+                <p><b>Find Relation</b></p>
+                <p>PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values  X and Y and asks you to find the relation between them.The relationships between integers X and Yare as follows If X  , it means that 
+                    X  is smaller than  Y . If X > Y, it means that X is greater than Y.If X=Y, it means that  X  is equal to Y. </p>
+                    <pre>const findRelation = (x,y) => {
+                        if(x>y){
+                          return(x +" is greater than " +y );
+                        }
+                        else if ( x < y){
+                          return(x+" is smaller than " +y)
+                        } 
+                        else {
+                        return (x+" is equal to "+y)
+                        }
+                    };</pre>
+                    <hr>
+    
+                    <p><b>Find Grades</b></p>
+                    <p>Your school has the following grading system based upon the marks(M) obtained by a student:If M≤ 10 , the grade will be E .
+                        If  11 ≥M≤20, the grade will be  D .
+                        If 21_>M≤30, the grade will be C.
+                        If 31  ≥M ≤ 40 , the grade will be  B .
+                        If  41 ≥ M ≤50 , the grade will be A .
+                        Your friend will enter his marks out of 50, and your task is to print his grades using a switch statement.</p>
+                        <pre>const findGrades = (a) => {
+                            if(a>=11 && a<=20){
+                              return "D"
+                            }
+                            else if (a>=21 && a<=30){
+                              return "C"
+                            }
+                            else if (a>=31 && a<=40){
+                              return "B"
+                            }
+                            else if (a>=41 && a<=50){
+                              return "A"
+                            }
+                            else {
+                              return"E"
+                              
+                            }
+                        };</pre>
+                        <hr>
+                        <p><b>Get Value</b></p>
+                        <p>You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.
+
+                            | P or p 	- PrepBytes      	|
+                            | Z or z 	- Zenith         	|
+                            | E or e 	- Expert Coder   	|
+                            | D or d 	- Data Structure 	|</p>
+                            <pre>const getValue = (a) => {
+                                if(a==="P"||a==='p')
+                                {
+                                return "PrepBytes"
+                                  }
+                                else if (a==='E'||a==='e')
+                                {
+                                return 'Expert Coder'
+                                }
+                                else if (a==='Z'||a==='z'){
+                                  return 'Zenith'
+                                }
+                                else if(a==='D'||a==='d'){
+                                  return 'Data Structure'
+                                }
+                                
+                            };</pre>
+                            <hr>
+                            <p><b>Find the maximum out of three numbers.</b></p>
+                            <p>Take three numbers and print the largest number among them if all of three are same print  -1 .</p>
+                                <pre>const Max_out_of_three = (A,B,C) => {
+                                    if(A>B && A>C){
+                                      return A;
+                                    }
+                                     else if(B>A && B>C){
+                                      return B;
+                                    }
+                                     else if(C>A && C>B){
+                                      return C;
+                                    }
+                                    else{
+                                      return -1
+                                    }
+                                      
+                                  
+                                  };</pre>
+                                  <hr>
+                                  <p><b>Second Smallest</b></p>
+                                  <p>You are given  3 distinct integers X , Y, and Z, and your task is to find and return the second smallest integer among the three provided integers.</p>
+                                     <pre>
+                                        const findSndSmallest = (x,y,z) => {
+                                          if(x < y && x< z) {
+                                            if(y< z){
+                                              return y;
+                                            }
+                                          }
+                                          else if(y< z && y< z) {
+                                            if(x< z){
+                                              return x;
+                                            }
+                                          }
+                                            else if(z< y && z< y) {
+                                            if(x< y){
+                                              return x;
+                                            }
+                                          }
+                                        };</pre> <hr>
+                                  <p><b>Check whether the triangle is Acute or Obtuse</b></p>
+                                  <p>Write a program takes takes three angles and checks whether the triangle is acute or obtuse.</p>
+                                  <pre>const Triangle_Check = (A,B,C) => {
+                                    if(A>90||B>90||C>90){
+                                      return "obtuse"
+                                    }
+                                    else{
+                                      return "acute"
+                                    }
+                                      
+                                  };
+                                  </pre>
+                                  <hr>
+</body>
+</html>
