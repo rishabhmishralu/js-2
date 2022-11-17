@@ -32,18 +32,21 @@
     <h1>JavaScript Handson-2</h1>
     <P><B>Calculator</B></P>
     <P>Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.</P>
-    <pre>const Calculator = (A, B, C) => 
-      {
-        if(A==='+')
-        return B+C;
-        else if (A==='-')
-        return B-C;
-        else if (A==='*')
-        return B*C;
-        else if (A=== '/')
-        return B/C;
-          
-      };
+    <pre>
+    const Calculator = (A, B, C) => 
+{
+switch(A){
+  case"+":
+  return B+C;
+	case"-":
+	return B-C;
+	case"*":
+	return B*C;
+	case "/":
+	return B/C;
+  default:  
+    return "invalid"}
+};
       </pre>
       <hr>
     <p><b>Check whether the condition is fulfilled or not?</b></p>
